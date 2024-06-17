@@ -9,11 +9,12 @@
   text-align: center;
 }
 
-
 body{
+  overflow-x: hidden;
+}
+html{
   scroll-padding-top: 9rem;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 html::-webkit-scrollbar{
@@ -37,6 +38,7 @@ html::-webkit-scrollbar-thumb{
   border-radius: 0.7rem;
   border:1px solid var(--primary-color);
   cursor: pointer;
+  min-width: 7rem;
   
 
   &:hover{
@@ -46,15 +48,13 @@ html::-webkit-scrollbar-thumb{
   }
 }
 
-
 /* anchor tag  */
 a{
-  color: var(--black);
+  color: inherit;
   cursor: pointer;
-  
+
   &:hover{
     transform: scale(0.9);
-    color: var(--primary-color);
   }
 }
 
@@ -73,4 +73,34 @@ section{
   text-decoration-style: dotted;
   text-underline-offset: 0.2rem;
   text-transform: uppercase;
+}
+
+/* heding top design  */
+.head{
+  display: flex;
+  flex-flow: row;
+  gap: 3px;
+  align-items: center;
+  padding: 0 0 4px 0;
+
+}
+.head .line1{
+  height: 1.5px;
+  width: 30px;
+  background-color: #141414;
+  
+}
+.head .line2{
+  height: 1.5px;
+  width: 12px;
+  background-color: #141414;
+}
+.head i{
+  font-size: 4px;
+  color: red;
+}
+.head p{
+  font-size: 15px;
+  font-weight:bolder;
+  color: var(--primary-color);
 }

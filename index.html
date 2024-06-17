@@ -15,23 +15,30 @@
     <nav class="navbar">
       <div href="" class="cross-btn"><i class="fa-solid fa-times"></i></div>
       <button class="btn">Download CV</button>
-      <a href="#" class="anchortags">Home</a>
-      <a href="#" class="anchortags">Projects</a>
-      <a href="#" class="anchortags">Achievements</a>
-      <a href="#" class="anchortags">Contact Me</a>
+      <a href="#home" class="anchortags">Home</a>
+      <a href="#" class="anchortags">About Me</a>
+      <a href="#" class="anchortags">Education</a>
+      <a href="#project" class="anchortags">Projects</a>
+      <a href="#" class="anchortags">Skills</a>
+      <a href="#" class="anchortags">Portfolio</a>
+      <a href="#contact" class="anchortags">Contact Me</a>
     </nav>
       <div href="#" id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></div>
   </header>
-  <section class="home">
+  <section id="home" class="home">
     <div class="home-content">
-      <h3>Full-Stack Developer & Aspiring Data Scientist</h3>
+      <div class="head">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <i class="fa-solid fa-circle"></i>
+        <p class="title"><em>MERN Stack Developer</em></p>
+      </div>
       <div class="home-info">
         <p>Hi, I'm </p>
-        <h1><i>Badakh Aniket</i></h1>
+        <h1><em>Badakh Aniket</em></h1>
         <p>a full-stack developer currently pursuing an undergraduate degree in Information Technology. With a keen interest in data science, I specialize in building scalable web applications and leveraging data to drive insights.</p>
       </div>
-      <button class="btn">Get in Touch</button>
-      <button class="btn">Explore Project</button>
+      <button class="btn"><a href="#project">Explore Project</a></button>
     </div>
     <div class="home-img">
       <img src="./Images/aniket.jpeg" alt="Aniket" width="300px">
@@ -51,7 +58,7 @@
       </div>
   </section>
 
-  <section class="projects">
+  <section id="project" class="projects">
    <h1 class="heading">* Projects *</h1>
     <div class="project-container">
       <div class="box">
@@ -127,18 +134,21 @@
   </div>
   </section>
 
-  <section class="contact">
+  <section id="contact" class="contact">
     <h1 class="heading">* get in touch *</h1>
     <div class="container">
-      <div class="box-touch">
-        <input class="input-box" type="text" name="" id="fullName" placeholder="Enter Full Name" required>
-        <input class="input-box" type="email" id="email" placeholder="Enter Email Id" required>
-        <input class="input-box" type="text" id="contactNo" placeholder="Optional">
-        <input class="input-box" type="text" id="company" placeholder="Enter Company/Community Name">
-        <textarea class="input-box" name="msg" id="msg" placeholder="Leave Some Message"></textarea>
-      </div>
+      <form class="box-touch">
+        <h2 class="title">Drop Me A Message</h2>
+        <input class="input-box" type="text" name="" id="fullName" placeholder="Name" required>
+        <input class="input-box" type="email" id="email" placeholder="Email" required>
+        <input class="input-box" type="text" id="contactNo" placeholder="Contact">
+        <input class="input-box" type="text" id="company" placeholder="Company/Community" required>
+        <textarea style="overflow:auto;resize:none;" class="input-box" name="msg" id="msg" placeholder="Leave Some Message"></textarea required >
+          <button class="btn">Send Message</button>
+      </form>
       
       <div class="box-contact">
+        <h2 class="title">Contact Me</h2>
         <div>
           <i class="fa-solid fa-location-dot"></i>
           <span><b> Adress:</b> Badakh Aniket Ramesh<br> Sanjivani College Of Engineering <br>Kopargaon-423603</span>
@@ -156,12 +166,49 @@
           <a href="https://www.linkedin.com/in/aniket-badakh/" target="_blank"><b> Linkedin:</b> aniket-badakh</a>
         </div>
       </div>
-    
-    
-    
-    
-    
   </section>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="./Images/logo2.png" alt="Aniket Badakh" width="200px">
+      <div class="links">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-hackerrank"></i>
+      </div>
+      <button class="btn">Download CV</button>
+    </div>
+    <div class="footer-links">
+      <h3 class="quick-links-heading">Links</h3>
+      <div class="quick-links">
+        <a href="#home" class="anchortags">Home</a>
+        <a href="#project" class="anchortags">Projects</a>
+        <a href="#" class="anchortags">Achievements</a>
+        <a href="#contact" class="anchortags">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="footer-desc">
+      <p>Thank you for visiting MyProfolio! Your time and interest are greatly appreciated. Feel free to reach out if you have any questions or opportunities. Have a wonderful day!</p>
+      <div class="footer-star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    <div class="footer-adress">
+      <a href="tel:+918767809061">+91 8767809061</a>
+      <a href="mailto:aniketbadakh1212@gmail.com" target="_blank">aniketbadakh1212@gmail.com</a>
+      <a href="https://www.linkedin.com/in/aniket-badakh/" target="_blank">Linkedin</a>
+      <div class="adress">
+        <p>Badakh Aniket Ramesh</p>
+        <p>Sanjivani College Of Engineering</p>
+        <p>Kopargaon-423603</p>
+      </div>
+    </div>
+    <div class="footer-copyright">Copyright © 2024</div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
