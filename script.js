@@ -1,3 +1,5 @@
+
+// navbar script
 let btn = document.querySelector("#menu-btn");
 let nav = document.querySelector(".navbar");
 let close = document.querySelector(".cross-btn");
@@ -33,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function countUp(element, target, duration) {
   let start = 0;
-  const increment = target / (duration / 100); // How much to increment by
-  const interval = 100; // How often to update the number in milliseconds
+  const increment = target / (duration / 100); 
+  const interval = 100; 
 
   const counter = setInterval(() => {
       start += increment;
