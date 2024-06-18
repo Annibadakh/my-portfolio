@@ -8,7 +8,7 @@
 }
 /* header  */
 .header{
-  position: sticky;
+  position: fixed;
   top: 0; left: 0; right: 0;
   height: 70px;
   z-index: 5;
@@ -49,6 +49,7 @@ nav{
 
 /* hero section  */
 .home{
+  margin-top: 73px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -113,21 +114,59 @@ nav{
 
 /* showcase display  */
 .display{
+  padding: 0.7rem;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 1rem;
   align-items: center;
   background-color: var(--primary-color);
 
 }
 .display .box{
-  height: 5rem;
-  width: 13rem;
+  height: 7rem;
+  width: 7rem;
   background-color: white;
-  margin: 1rem 0;
-  border-radius: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 50%
 }
+
+.display .box{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+.display .box i{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.display .box h4{
+  color: var(--primary-color);
+}
+
+.display .box .count{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+ 
+
+/* project section */
 
 .project-container{
   display: flex;
@@ -185,7 +224,7 @@ nav{
   border: 1px solid var(--primary-color);
 }
 
-.project-title h3{
+.project-title h4{
   color: var(--primary-color);
   margin: 0.5rem;
 }
@@ -353,9 +392,6 @@ nav{
 
 /* media queries */
 @media (max-width:880px){
-  html{
-    overflow-x: hidden;
-  }
   .navbar{
     position: absolute;
     flex-flow: column !important;
