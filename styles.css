@@ -317,14 +317,14 @@ nav{
   line-height: 23px;
   color: black;
 }
+
 .education .container .line .circles{
   border-radius: 50%;
   width: 50px;
   height: 50px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   z-index: 3;
 }
 
@@ -581,5 +581,24 @@ nav{
 @media(max-width:604px) {
   .footer-logo, .footer-links, .footer-desc, .footer-adress{
   border-bottom: 1px solid black;
+  }
+}
+
+/* education  */
+@media(max-width:375px){
+  .education .container{
+    padding-left: 0;
+  }
+  .education .container .line{
+    align-items:baseline;
+  }
+  .education .container .line2{
+    left: 23px;
+  }
+  .education .container .line .info-box{
+    gap: 8px;
+  }
+  .education .container .line .info-box .desc{
+    font-size: 15px;
   }
 }
