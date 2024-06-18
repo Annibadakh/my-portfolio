@@ -340,7 +340,7 @@ nav{
   width: 20rem;
   height: auto;
   margin: 2rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: var(--box-shadow);
   border-radius: 1rem;
 
@@ -354,7 +354,7 @@ nav{
 .project-img{
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 19rem;
   border: 1px solid var(--primary-color);
 }
 .project-img img{
@@ -366,11 +366,11 @@ nav{
   background-color: transparent;
   color: transparent;
   width: 100%;
-  height: auto;
+  height: 100%;
   bottom: 0;
   padding: 0.5rem;
   transition-timing-function: ease-out;
-  border-radius: 1rem 1rem 0 0;
+  
 }
 .project-content p{
   text-align: left;
