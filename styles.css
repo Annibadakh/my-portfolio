@@ -455,12 +455,14 @@ nav{
 .contact .container .success-msg{
   display: none;
   position: absolute;
-  width: 30rem;
-  height: 25.7rem;
+  width: 100%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.732);
-  left: 7.6rem;
+  left: 0;
+  top: 0;
   color: green;
   place-items: center;
+  z-index: 4;
 }
 .contact .container .success-msg i{
   font-size: 5rem;
