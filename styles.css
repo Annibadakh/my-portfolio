@@ -18,7 +18,7 @@
   border: 1px solid var(--primary-color);
   background-color: var(--secondary);
   box-shadow: var(--box-shadow);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .header-logo img{
@@ -33,7 +33,7 @@ nav{
   display: flex;
   flex-flow: row;
   align-items: center;
-  gap: 1.3rem;
+  gap: 1rem;
 }
 .anchortags{
   color: var(--black);
@@ -242,16 +242,16 @@ nav{
 .contact .box-contact div{
   margin-bottom: 1rem;
 }
-.contact .title{
+.contact .container .title{
   position: absolute;
   top: 0.5rem;
   left: 1.5rem;
 
 }
-.contact .box-touch h2{
+.contact .box-touch h3{
   color: var(--primary-color);
 }
-.contact .box-contact h2{
+.contact .box-contact h3{
   color: var(--white);
 }
 
@@ -261,7 +261,7 @@ nav{
   position: relative;
   padding:  3rem; margin:0.1rem;
   border: 1px solid var(--primary-color);
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-image: linear-gradient(to top, #eed9e8 0%, #c2d2ee 100%);
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -348,15 +348,6 @@ nav{
   position: absolute;
   bottom: 1rem;
 }
-
-
-
-
-
-
-
-
-
 
 
 

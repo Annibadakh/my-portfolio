@@ -81,7 +81,9 @@ section{
   flex-flow: row;
   gap: 3px;
   align-items: center;
+  justify-content: center;
   padding: 0 0 4px 0;
+  text-transform: uppercase;
 
 }
 .head .line1{
