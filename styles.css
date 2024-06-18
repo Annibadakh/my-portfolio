@@ -354,7 +354,7 @@ nav{
 .project-img{
   position: relative;
   width: 100%;
-  height: 19rem;
+  height: 300px;
   border: 1px solid var(--primary-color);
 }
 .project-img img{
@@ -452,12 +452,26 @@ nav{
 .contact .box-contact h3{
   color: var(--white);
 }
-
+.contact .container .success-msg{
+  display: none;
+  position: absolute;
+  width: 30rem;
+  height: 25.7rem;
+  background-color: rgba(255, 255, 255, 0.732);
+  left: 7.6rem;
+  color: green;
+  place-items: center;
+}
+.contact .container .success-msg i{
+  font-size: 5rem;
+  padding: 1rem;
+}
 
 /* footer  */
 .footer{
   position: relative;
-  padding:  3rem; margin:0.1rem;
+  padding:  2.5rem;
+  margin:0.1rem;
   border: 1px solid var(--primary-color);
   background-image: linear-gradient(to top, #eed9e8 0%, #c2d2ee 100%);
   display: flex;
@@ -468,7 +482,8 @@ nav{
   align-items: center;
 }
 .footer-logo, .footer-links, .footer-desc, .footer-adress{
-  width: 15rem;
+  min-width: 15rem;
+  max-width: 20rem;
   padding-bottom: 1rem;
 }
 .footer-logo img{
@@ -499,13 +514,11 @@ nav{
   font-size: 1.3rem;
   gap: 0.8rem 0;
   margin-top: 1.5rem;
-  align-items: start;
-  padding: 0 0 0 4.5rem;
+  align-items: center;
 }
 .quick-links-heading{
-  text-align: left;
+  text-align: center;
   color: var(--primary-color);
-  padding: 0 0 0 4.5rem;
 }
 .footer-desc{
   line-height: 1.5rem;

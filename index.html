@@ -193,15 +193,21 @@
       <p class="title"><em>Get in Touch</em></p>
     </div>
     <div class="container">
-      <form class="box-touch">
+      <form class="box-touch" id="contact-form" action="https://formspree.io/f/mwkggday" method="post">
         <h3 class="title">Drop Me A Message</h3>
-        <input class="input-box" type="text" name="" id="fullName" placeholder="Name" required>
-        <input class="input-box" type="email" id="email" placeholder="Email" required>
-        <input class="input-box" type="text" id="contactNo" placeholder="Contact">
-        <input class="input-box" type="text" id="company" placeholder="Company/Community" required>
+        <input class="input-box" type="text" name="name" id="fullName" placeholder="Name" required>
+        <input class="input-box" type="email" id="email" name="email" placeholder="Email" required>
+        <input class="input-box" type="text" id="contactNo" name="contact" placeholder="Contact">
+        <input class="input-box" type="text" id="company" name="company" placeholder="Company/Community" required>
         <textarea style="overflow:auto;resize:none;" class="input-box" name="msg" id="msg" placeholder="Leave Some Message"></textarea required >
-          <button class="btn">Send Message</button>
+          <button class="btn" id="form-btn"></button>
       </form>
+      <div class="success-msg" id="success-message">
+        <div>
+          <i class="fa-regular fa-circle-check"></i>
+          <h2>Thank You for Reaching Out!</h2>
+        </div>
+    </div>
       <div class="box-contact">
         <h3 class="title">Contact Me</h3>
         <div>
