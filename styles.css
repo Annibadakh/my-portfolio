@@ -37,6 +37,7 @@ html::-webkit-scrollbar-track{
 
 html::-webkit-scrollbar-thumb{
   background: var(--primary-color);
+  border-radius: 0.5rem;
 }
 
 /* button */
