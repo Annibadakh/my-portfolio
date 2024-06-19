@@ -341,8 +341,9 @@ nav{
   width: 20rem;
   height: auto;
   margin: 2rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   box-shadow: var(--box-shadow);
+  border: 1px solid black;
 
   &:hover .project-content{
     color: var(--black);
@@ -610,6 +611,9 @@ nav{
   width: 100%;
   border: 1px solid black;
   cursor: pointer;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
 
   &:hover .box-desc{
     color: white;
