@@ -50,23 +50,15 @@ function countUp(element, target, duration) {
 }
 
 
-let formbtn = document.querySelector("#form-btn");
-function loading(flag){
-  (flag) ? (formbtn.innerHTML ="Send Message") : (formbtn.innerHTML = "Submitting.....");
-}
-
-// contact form
-
-loading(true);
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
   var form = event.target;
   var formData = new FormData(form);
-  var loadingBar = document.getElementById('loading-bar');
+  let loader = document.querySelector("#loader");
 
   // display loading bar
-  loading(false);
+  loader.style.display ="grid";
 
 
   fetch(form.action, {
@@ -78,8 +70,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   }).then(response => {
 
     // hide laoding bar
-    loading(true);
-
+      loader.style.display ="none";
 
       if (response.ok) {
           // Hide the form and show the success message

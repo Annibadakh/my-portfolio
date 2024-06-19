@@ -469,6 +469,34 @@ nav{
   padding: 1rem;
 }
 
+.contact .container .loader{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.732);
+  place-items: center;  
+}
+.contact .container .loader .loading{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 6px solid rgba(128, 128, 128, 0.265);
+  border-top: 6px solid var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
 /* footer  */
 .footer{
   position: relative;
