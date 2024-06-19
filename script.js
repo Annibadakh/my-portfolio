@@ -1,22 +1,21 @@
 
 // navbar script
-let btn = document.querySelector("#menu-btn");
 let nav = document.querySelector(".navbar");
-let close = document.querySelector(".cross-btn");
+let closenav = document.querySelector(".cross-btn");
 const activenav = () => {
   nav.classList.add("active");
-  close.classList.add("active");
+  closenav.classList.add("active");
 }
 
 const removenav = () => {
   nav.classList.remove("active");
-  close.classList.remove("active");
+  closenav.classList.remove("active");
 }
 
-btn.addEventListener("click",activenav);
+document.querySelector("#menu-btn").addEventListener("click",activenav);
 window.addEventListener("scroll",removenav);
-close.addEventListener("click",removenav);
-
+closenav.addEventListener("click",removenav);
+// end
 
 // count increment functtion
 document.addEventListener("DOMContentLoaded", function() {
@@ -49,7 +48,9 @@ function countUp(element, target, duration) {
   }, interval);
 }
 
+// end
 
+// contact form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
@@ -59,7 +60,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
   // display loading bar
   loader.style.display ="grid";
-
 
   fetch(form.action, {
       method: form.method,
@@ -94,9 +94,16 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       alert("Oops! There was a problem submitting your form");
   });
 });
+//end
+
+// downlaod resume window
+const resume = ()=>{
+    window.open('https://drive.google.com/file/d/1VoCpLBGFwLaB2wiUBLTAS4fDGmnX7e3j/view?usp=drive_link','_blank');
+}
+document.querySelector("#resume1").addEventListener("click",resume);
+document.querySelector("#resume2").addEventListener("click",resume);
 
 
-
-
+// end
 
   

@@ -336,14 +336,17 @@ nav{
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  row-gap: 3rem;
+  padding: 1.5rem;
 }
 .project-container .box{
   width: 20rem;
   height: auto;
-  margin: 2rem;
+  
   overflow: hidden;
   box-shadow: var(--box-shadow);
   border: 1px solid black;
+  cursor: pointer;
 
   &:hover .project-content{
     color: var(--black);
@@ -394,6 +397,81 @@ nav{
   font-size: 1.7rem;
   margin: 0 1rem;
 }
+
+/* portfolio achievements */
+
+.portfolio-container{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+}
+.portfolio-container .box{
+  width: 22rem;
+  height: 30rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+}
+.portfolio-container .box .innerbox{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+
+  &:hover .box-desc{
+    color: white;
+    background-color: #6674ccb7;
+  }
+}
+.portfolio-container .box .innerbox .box-desc{
+  height: 100%;
+  padding: 1rem;
+  line-height: 1.4rem;
+  background-color:transparent;
+  color: transparent;
+}
+.portfolio-container .box .innerbox .box-desc h3{
+  padding-bottom: 1rem;
+}
+.portfolio-container .box1 .innerbox:nth-last-of-type(2){
+  background-image: url(./Images/zonal-handball.jpg);
+  height: 50%;
+}
+.portfolio-container .box1 .innerbox:nth-last-of-type(1){
+  background-image: url(./Images/sumago.jpg);
+  height: 50%;
+}
+
+.portfolio-container .box2 .innerbox:nth-last-of-type(2){
+  background-image: url(./Images/nptel.jpg);
+  height: 65%;
+}
+.portfolio-container .box2 .innerbox:nth-last-of-type(1){
+  background-image: url(./Images/aws.png);
+  height: 35%;
+}
+
+
+.portfolio-container .box3 .innerbox:nth-last-of-type(2){
+  background-image: url(Images/review-paper.jpg);
+  height: 55%;
+}
+.portfolio-container .box3 .innerbox:nth-last-of-type(1){
+  background-image: url(./Images/hackerrank.png);
+  height: 45%;
+}
+
 
 /* Contact section  */
 .contact .container{
@@ -583,79 +661,6 @@ nav{
 .footer-copyright{
   position: absolute;
   bottom: 1rem;
-}
-
-/* portfolio achievements */
-.portfolio-container{
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding-top: 1.5rem;
-}
-.portfolio-container .box{
-  width: 22rem;
-  height: 30rem;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-}
-.portfolio-container .box .innerbox{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  border: 1px solid black;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-
-  &:hover .box-desc{
-    color: white;
-    background-color: #6674ccb7;
-  }
-}
-.portfolio-container .box .innerbox .box-desc{
-  height: 100%;
-  padding: 1rem;
-  line-height: 1.4rem;
-  background-color:transparent;
-  color: transparent;
-}
-.portfolio-container .box .innerbox .box-desc h3{
-  padding-bottom: 1rem;
-}
-.portfolio-container .box1 .innerbox:nth-last-of-type(2){
-  background-image: url(./Images/zonal-handball.jpg);
-  height: 50%;
-}
-.portfolio-container .box1 .innerbox:nth-last-of-type(1){
-  background-image: url(./Images/sumago.jpg);
-  height: 50%;
-}
-
-.portfolio-container .box2 .innerbox:nth-last-of-type(2){
-  background-image: url(./Images/nptel.jpg);
-  height: 65%;
-}
-.portfolio-container .box2 .innerbox:nth-last-of-type(1){
-  background-image: url(./Images/aws.png);
-  height: 35%;
-}
-
-
-.portfolio-container .box3 .innerbox:nth-last-of-type(2){
-  background-image: url(Images/review-paper.jpg);
-  height: 55%;
-}
-.portfolio-container .box3 .innerbox:nth-last-of-type(1){
-  background-image: url(./Images/hackerrank.png);
-  height: 45%;
 }
 
 /* end  */
