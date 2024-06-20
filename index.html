@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+  <link rel="icon" href="./Images/logo3.png">
   <title>Aniket Badakh</title>
 </head>
 <body>
@@ -14,14 +14,14 @@
     <nav class="navbar">
       <div href="" class="cross-btn"><i class="fa-solid fa-times"></i></div>
       <a href="#home" class="anchortags">Home</a>
-      <a href="#education" class="anchortags">Education</a>
-      <a href="#project" class="anchortags">Projects</a>
-      <a href="#skills" class="anchortags">Skills</a>
-      <a href="#portfolio" class="anchortags">Portfolio</a>
-      <a href="#contact" class="anchortags">Contact Me</a>
-      <button class="btn" id="resume1"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Resume</button>
+      <a href="./components/education.html" class="anchortags" target="_self">Education</a>
+      <a href="./components/project.html" class="anchortags" target="_self">Projects</a>
+      <a href="./components/skills.html" class="anchortags" target="_self">Skills</a>
+      <a href="./components/portfolio.html" class="anchortags" target="_self">Portfolio</a>
+      <a href="./components/contact.html" class="anchortags" target="_self">Contact Me</a>
+      <button class="btn" onclick="window.open('https://drive.google.com/file/d/1VoCpLBGFwLaB2wiUBLTAS4fDGmnX7e3j/view?usp=drive_link','_blank')"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Resume</button>
     </nav>
-      <div href="#" id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+      <div id="menu-btn" class="menu-btn"><i class="fa-solid fa-bars"></i></div>
   </header>
 
   <section id="home" class="home">
@@ -49,17 +49,17 @@
       <div class="box">
         <i class="fa-solid fa-diagram-project"></i>
         <h4>Projects Done</h4>
-        <div class="count"><span id="count1">0</span><span>+</span></div>
+        <div class="count"><span id="count1" class="count1">0</span><span>+</span></div>
       </div>
       <div class="box">
         <i class="fa-regular fa-hourglass-half"></i>
         <h4>Working Hours</h4>
-        <div class="count"><span id="count2">0</span><span>+</span></div>
+        <div class="count"><span id="count2" class="count2">0</span><span>+</span></div>
       </div>
       <div class="box">
         <i class="fa-solid fa-stamp"></i>
         <h4>Certifications Done</h4>
-        <div class="count"><span id="count3">0</span><span>+</span></div>
+        <div class="count"><span id="count3" class="count3">0</span><span>+</span></div>
       </div>
   </section>
 
@@ -220,7 +220,7 @@
         <div class="innerbox">
           <div class="box-desc">
             <h3>Zonal Level Men's Handball Competition</h3>
-          <p>I am honored to be selected for the Zonal Level Men's Handball Competition. This recognition reflects my dedication and passion for the sport. I look forward to showcasing my skills and representing my team at this prestigious event.</p>
+            <p>I am honored to be selected for the Zonal Level Men's Handball Competition. This recognition reflects my dedication and passion for the sport. I look forward to showcasing my skills and representing my team at this prestigious event.</p>
           </div>
         </div>
         <div class="innerbox">
@@ -270,13 +270,13 @@
       <p class="title"><em>Get in Touch</em></p>
     </div>
     <div class="container">
-      <form class="box-touch" id="contact-form" action="https://formspree.io/f/mwkggday" method="post">
+      <form class="box-touch" id="contact-form1" action="https://formspree.io/f/mwkggday" method="post">
         <h3 class="title">Drop Me A Message</h3>
-        <input class="input-box" type="text" name="name" id="fullName" placeholder="Name" required>
-        <input class="input-box" type="email" id="email" name="email" placeholder="Email" required>
-        <input class="input-box" type="text" id="contactNo" name="contact" placeholder="Contact">
-        <input class="input-box" type="text" id="company" name="company" placeholder="Company/Community" required>
-        <textarea style="overflow:auto;resize:none;" class="input-box" name="msg" id="msg" placeholder="Leave Some Message"></textarea required >
+        <input class="input-box" type="text" name="name" id="fullName" autocomplete="name" placeholder="Name" required>
+        <input class="input-box" type="email" id="email" name="email" autocomplete="email" placeholder="Email" required>
+        <input class="input-box" type="text" id="contactNo" name="contact" autocomplete="tel" placeholder="Contact">
+        <input class="input-box" type="text" id="company" name="company" autocomplete="company" placeholder="Company/Community" required>
+        <textarea style="overflow:auto;resize:none;" class="input-box" name="msg" id="msg" autocomplete="msg" placeholder="Leave Some Message"></textarea required >
           <button class="btn" id="form-btn">Send Message</button>
 
           <div class="loader" id="loader">
@@ -321,17 +321,17 @@
         <a href="https://www.instagram.com/aniket__17_00/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://www.hackerrank.com/profile/aniketbadakh2221" target="_blank"><i class="fa-brands fa-hackerrank"></i></a>
       </div>
-      <button class="btn" id="resume2"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Resume</button>
+      <button class="btn" onclick="window.open('https://drive.google.com/file/d/1VoCpLBGFwLaB2wiUBLTAS4fDGmnX7e3j/view?usp=drive_link','_blank')"><i class="fa-solid fa-download"></i>&nbsp;&nbsp;Resume</button>
     </div>
     <div class="footer-links">
       <h3 class="quick-links-heading">Links</h3>
       <div class="quick-links">
         <a href="#home" class="anchortags">Home</a>
-        <a href="#education" class="anchortags">Education</a>
-        <a href="#project" class="anchortags">Projects</a>
-        <a href="#skills" class="anchortags">Skills</a>
-        <a href="#portfolio" class="anchortags">Portfolio</a>
-        <a href="#contact" class="anchortags">Contact Me</a>
+        <a href="./components/education.html" class="anchortags">Education</a>
+        <a href="./components/portfolio.html" class="anchortags">Projects</a>
+        <a href="./components/skills.html" class="anchortags">Skills</a>
+        <a href="./components/portfolio.html" class="anchortags">Portfolio</a>
+        <a href="./components/contact.html" class="anchortags">Contact Me</a>
       </div>
     </div>
 
@@ -357,5 +357,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

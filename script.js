@@ -19,9 +19,9 @@ closenav.addEventListener("click",removenav);
 
 // count increment functtion
 document.addEventListener("DOMContentLoaded", function() {
-  const count1 = document.getElementById('count1');
-  const count2 = document.getElementById('count2');
-  const count3 = document.getElementById('count3');
+  const count1 = document.getElementsByClassName('count1');
+  const count2 = document.getElementsByClassName('count2');
+  const count3 = document.getElementsByClassName('count3');
   const targetNum1 = 10;
   const targetNum2 = 500;
   const targetNum3 = 30;
@@ -50,60 +50,5 @@ function countUp(element, target, duration) {
 
 // end
 
-// contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  var form = event.target;
-  var formData = new FormData(form);
-  let loader = document.querySelector("#loader");
-
-  // display loading bar
-  loader.style.display ="grid";
-
-  fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-          'Accept': 'application/json'
-      }
-  }).then(response => {
-
-    // hide laoding bar
-      loader.style.display ="none";
-
-      if (response.ok) {
-          // Hide the form and show the success message
-          form.reset();
-          var successMessage = document.getElementById('success-message');
-          successMessage.style.display = 'grid';
-          // Hide the success message after 2 seconds
-          setTimeout(function() {
-              successMessage.style.display = 'none';
-          }, 2000);
-      } else {
-          return response.json().then(data => {
-              if (Object.hasOwn(data, 'errors')) {
-                  alert(data["errors"].map(error => error["message"]).join(", "));
-              } else {
-                  alert("Oops! There was a problem submitting your form");
-              }
-          });
-      }
-  }).catch(error => {
-      alert("Oops! There was a problem submitting your form");
-  });
-});
-//end
-
-// downlaod resume window
-const resume = ()=>{
-    window.open('https://drive.google.com/file/d/1VoCpLBGFwLaB2wiUBLTAS4fDGmnX7e3j/view?usp=drive_link','_blank');
-}
-document.querySelector("#resume1").addEventListener("click",resume);
-document.querySelector("#resume2").addEventListener("click",resume);
-
-
-// end
 
   
