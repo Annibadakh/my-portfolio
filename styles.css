@@ -127,7 +127,7 @@ section{
   padding:  0px 3rem;
   margin: 0.1rem;
   border: 1px solid var(--primary-color);
-  /* background-color: var(--secondary); */
+/*   background-color: var(--secondary); */
   background-image: linear-gradient(to right, #f9f5f3 0%, #e2edf4 100%);
   box-shadow: var(--box-shadow);
   font-size: 1.1rem;
@@ -550,7 +550,7 @@ nav{
   background-color: var(--primary-color);
 }
 .contact .box-contact .contact-detail{
-  width: 20rem;
+  width: 21rem;
   margin: 3rem 1rem 1rem 0;
   padding: 0.7rem;
   display: flex;
