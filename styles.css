@@ -74,6 +74,7 @@ section{
   padding: 2rem 0;
   margin: 0.1rem;
   border: 1.3px solid var(--primary-color);
+  background-image: linear-gradient(to right, #f9f5f3 0%, #e2edf4 100%);
 }
 
 /* heding design  */
@@ -126,7 +127,8 @@ section{
   padding:  0px 3rem;
   margin: 0.1rem;
   border: 1px solid var(--primary-color);
-  background-color: var(--secondary);
+/*   background-color: var(--secondary); */
+  background-image: linear-gradient(to right, #f9f5f3 0%, #e2edf4 100%);
   box-shadow: var(--box-shadow);
   font-size: 1.1rem;
 }
