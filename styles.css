@@ -339,6 +339,7 @@ nav{
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  column-gap: 1rem;
   row-gap: 3rem;
   padding: 1.5rem;
 }
