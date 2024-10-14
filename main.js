@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const count3 = document.getElementById('count3');
     const targetNum1 = 15;
     const targetNum2 = 1000;
-    const targetNum3 = 40;
+    const targetNum3 = 30;
     const duration = 1000; 
   
     countUp(count1, targetNum1, duration);
