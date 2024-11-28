@@ -188,7 +188,7 @@ nav{
   margin-bottom: 1rem;
 }
 .home-info p{
-  text-align: left;
+  text-align: justify;
 }
 .home-info h1{
   text-align: left;
@@ -353,9 +353,7 @@ nav{
   cursor: pointer;
 
   &:hover .project-content{
-    color: var(--black);
-    background-color:rgba(255, 255, 255, 0.824) ;
-    border: 1px solid var(--primary-color);
+    top: 0;
   }
 }
 
@@ -364,6 +362,7 @@ nav{
   width: 100%;
   height: 19rem;
   border: 1px solid var(--primary-color);
+  overflow: hidden;
 }
 .project-img img{
   width: 100%;
@@ -371,18 +370,18 @@ nav{
 }
 .project-content{
   position: absolute;
-  background-color: transparent;
-  color: transparent;
+  background-color: rgba(255, 255, 255, 0.824);
+  color: var(--black);
+  border: 1px solid var(--primary-color);
+  top: 100%;
   width: 100%;
   height: 100%;
-  bottom: 0;
   padding: 0.5rem;
-  transition-timing-function: ease-out;
-  user-select: none;
-  
+  transition: all 0.3s linear;
+
 }
 .project-content p{
-  text-align: left;
+  text-align: justify;
 }
 .project-content h4{
   text-align: left;
@@ -392,6 +391,7 @@ nav{
   width: 100%;
   height: 4.5rem;
   border: 1px solid var(--primary-color);
+  z-index: 10;
 }
 
 .project-title h4{
@@ -454,6 +454,7 @@ nav{
 
 }
 .portfolio-container .box .innerbox{
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -465,17 +466,18 @@ nav{
   box-shadow: var(--box-shadow);
 
   &:hover .box-desc{
-    color: white;
-    background-color: #6674ccb7;
+    top: 0;
   }
 }
 .portfolio-container .box .innerbox .box-desc{
+  position: absolute;
+  top: 100%;
   height: 100%;
   padding: 1rem;
   line-height: 1.4rem;
-  background-color:transparent;
-  color: transparent;
-  user-select: none;
+  color: white;
+  background-color: #6674ccb7;
+  transition: all 0.3s linear;
 }
 .portfolio-container .box .innerbox .box-desc h3{
   padding-bottom: 1rem;
@@ -508,6 +510,9 @@ nav{
   height: 45%;
 }
 
+.portfolio-container .box .innerbox .box-desc p{
+  text-align: justify;
+}
 
 /* Contact section  */
 .contact .container{
