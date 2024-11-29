@@ -268,11 +268,12 @@ nav{
 
 }
 .display .box{
-  height: 7rem;
-  width: 7rem;
+  height: 8rem;
+  width: 8rem;
   background-color: white;
   margin: 0.5rem 0;
-  border-radius: 50%
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
 }
 
 .display .box{
@@ -293,12 +294,12 @@ nav{
 
 .display .box .count{
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   border-radius: 50%;
   border: 1px solid white;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
