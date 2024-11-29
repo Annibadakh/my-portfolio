@@ -456,11 +456,14 @@ nav{
 }
 .skills .skills-img img{
   width: 8rem;
+  transition: all 0.5s linear;
 
   &:hover{
-    border: 1px solid black;
+    
     border-radius: 50%;
     background-color: var(--primary-color);
+    transform: rotateY(360deg);
+
   }
 }
 
