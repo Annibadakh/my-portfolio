@@ -171,13 +171,13 @@ nav{
 }
 
 .home-content{
-  background-color: rgba(128, 128, 128, 0.161);
+  background-color: rgba(128, 128, 128, 0.078);
   width: 30rem;
   margin: 0 1rem;
-  border: 1px solid var(--primary-color);
+  /* border: 1px solid var(--primary-color); */
   border-radius: 15px;
   padding: 2.5rem;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
   text-align: left;
 }
 .home-content h3{
@@ -189,10 +189,16 @@ nav{
 }
 .home-info p{
   text-align: justify;
+  line-height: 1.3rem;
+  font-size: large;
 }
 .home-info h1{
   text-align: left;
   margin: 0.5rem 0;
+  font-size: 35px;
+  background-image: url(Images/images.jpeg);
+    background-clip: text;
+    color: transparent;
 }
 .home-content button{
   margin: 0 0rem 0 0;
@@ -203,22 +209,51 @@ nav{
   display: flex;
   align-items: center;
   max-width: fit-content;
+  
 }
 .home-img img{
-  border: 1.5px solid var(--black);
+  border: 1.5px solid var(--white);
+  border-radius: 20px;
   box-shadow: var(--box-shadow);
   z-index: 2;
 }
+
+
 .home-img .before{
   position: absolute;
-  border: 1.5px solid var(--primary-color);
-  bottom: -1.1rem;
-  right: -1.1rem;
-  width: 100%;
-  height: 100%;
-  background-color: #D9AFD9;
-  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  border-radius: 20px;
+  top: -2%;
+  left: -2%;
+  width: 104%;
+  height: 104%;
+  overflow: hidden;
+
 }
+.home-img .before::after{
+  position: absolute;
+  content: "";
+  top: -30%;
+  left: -30%;
+  height: 160%;
+  width: 160%;  
+  animation: spin 3s ease-in infinite;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+
+
+  
+
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 
 /* count showcase display  */
 .display{
@@ -353,7 +388,7 @@ nav{
   cursor: pointer;
 
   &:hover .project-content{
-    top: 0;
+    bottom: 0;
   }
 }
 
@@ -370,10 +405,11 @@ nav{
 }
 .project-content{
   position: absolute;
-  background-color: #6674ccb7;
-  color: var(--white);
+  /* background-color: #6674ccb7; */
+  background-image: linear-gradient(to right, #f9f5f3 0%, #e2edf4 100%);
+  color: var(--black);
   border: 1px solid var(--primary-color);
-  top: 100%;
+  bottom: 100%;
   width: 100%;
   height: 100%;
   padding: 0.5rem;
