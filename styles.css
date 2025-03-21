@@ -104,7 +104,7 @@ section{
   color: red;
 }
 .head p{
-  font-size: 15px;
+  font-size: 18px;
   font-weight:bolder;
   color: var(--primary-color);
 }
@@ -189,7 +189,8 @@ nav{
 }
 .home-info p{
   text-align: justify;
-  line-height: 1.3rem;
+  font-weight:700;
+  line-height: 1.5rem;
   font-size: large;
 }
 .home-info h1{
@@ -406,8 +407,8 @@ nav{
 }
 .project-content{
   position: absolute;
-  /* background-color: #6674ccb7; */
-  background-image: linear-gradient(to right, #f9f5f3 0%, #e2edf4 100%);
+  background-color: var(--secondary);
+  /* background-image: var(--white); */
   color: var(--black);
   border: 1px solid var(--primary-color);
   bottom: 100%;

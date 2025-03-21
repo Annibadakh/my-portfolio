@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const count1 = document.getElementById('count1');
     const count2 = document.getElementById('count2');
     const count3 = document.getElementById('count3');
-    const targetNum1 = 15;
-    const targetNum2 = 1000;
-    const targetNum3 = 30;
+    const targetNum1 = 20;
+    const targetNum2 = 2000;
+    const targetNum3 = 45;
     const duration = 1000; 
   
     countUp(count1, targetNum1, duration);
