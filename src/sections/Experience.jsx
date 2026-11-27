@@ -10,7 +10,7 @@ export default function Experience() {
       id="experience"
       eyebrow="Experience"
       title="Where I've shipped"
-      intro="A full-time role, an internship and a long freelance engagement, all on software that real users depend on."
+      intro="A full-time role, two internships, freelance work and an early SDE role, mostly on software that real users depend on."
     >
       <ol className="relative space-y-6 border-l border-line pl-6 sm:pl-8">
         {experience.map((job) => (
@@ -25,9 +25,13 @@ export default function Experience() {
               <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-1">
                 <div>
                   <h3 className="text-xl font-bold">{job.role}</h3>
-                  <ExternalLink href={job.url} className="link text-sm font-semibold">
-                    {job.company}
-                  </ExternalLink>
+                  {job.url ? (
+                    <ExternalLink href={job.url} className="link text-sm font-semibold">
+                      {job.company}
+                    </ExternalLink>
+                  ) : (
+                    <p className="text-sm font-semibold text-accent-ink">{job.company}</p>
+                  )}
                 </div>
                 <div className="flex items-center gap-2 font-mono text-xs text-muted">
                   <span>
@@ -37,6 +41,7 @@ export default function Experience() {
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted">{job.summary}</p>
+              {job.points.length > 0 && (
               <ul className="mt-4 space-y-2 text-sm">
                 {job.points.map((pt) => (
                   <li key={pt} className="flex gap-3">
@@ -45,6 +50,8 @@ export default function Experience() {
                   </li>
                 ))}
               </ul>
+              )}
+              {(job.stack.length > 0 || job.caseStudy) && (
               <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex flex-wrap gap-1.5">
                   {job.stack.map((s) => (
@@ -59,6 +66,7 @@ export default function Experience() {
                   </Link>
                 )}
               </div>
+              )}
             </article>
           </li>
         ))}

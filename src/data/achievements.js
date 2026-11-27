@@ -21,10 +21,18 @@ export const publications = [
     year: "",
     note: "Registered",
   },
+  {
+    kind: "Copyright",
+    title: "Independently developed engineering project",
+    venue: "Registered copyright",
+    year: "",
+    note: "Registered",
+  },
 ];
 
 export const achievements = [
   { title: "2nd Place, Hack-A-Bot Hackathon", detail: "Organised by UiPath." },
+  { title: "Bharatiya Antariksh Hackathon 2025", detail: "Certificate of participation." },
   { title: "300+ LeetCode problems", detail: "Data structures and algorithms practice.", url: "https://leetcode.com/u/xLjp90tolx/" },
   { title: "NPTEL Topper, Top 5%", detail: "Python for Data Science." },
   { title: "Zonal level handball", detail: "Selected for the Zonal Level Men's Handball Competition." },
@@ -37,13 +45,15 @@ export const certifications = [
   { title: "Python for Data Science", issuer: "NPTEL" },
   { title: "Cloud Foundations & Cloud Architecting", issuer: "AWS Academy" },
   { title: "JavaScript, SQL, CSS (Basic)", issuer: "HackerRank" },
+  { title: "ChatGPT & Zapier: Agentic AI for Everyone", issuer: "Online course" },
+  { title: "HTML and CSS: Building a Single-Page Website", issuer: "Online course" },
 ];
 
 export const education = [
   {
     degree: "B.Tech, Information Technology",
     school: "Sanjivani College of Engineering, Kopargaon",
-    period: "2022 – 2026",
+    period: "Nov 2022 – Jun 2026",
     score: "CGPA 8.6 / 10",
   },
 ];

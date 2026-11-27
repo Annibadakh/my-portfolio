@@ -49,4 +49,35 @@ export const experience = [
     stack: ["Node.js", "AWS SQS", "Lambda", "EventBridge", "S3", "React.js", "MySQL"],
     caseStudy: "prepportal-messaging",
   },
+  {
+    role: "Summer Intern",
+    company: "Celebal Technologies",
+    url: "https://celebaltech.com/",
+    type: "Internship",
+    start: "May 2025",
+    end: "Jul 2025",
+    summary: "Summer internship.",
+    points: [],
+    stack: [],
+  },
+  {
+    role: "Software Development Engineer",
+    company: "TwinsisTech",
+    type: "Full-stack",
+    start: "May 2024",
+    end: "Feb 2025",
+    summary: "Full-stack developer.",
+    points: [],
+    stack: [],
+  },
+];
+
+// Campus leadership, shown under Recognition.
+export const leadership = [
+  {
+    role: "Sports Secretary",
+    org: "Information Technology Engineers' Relic Association (ITERA)",
+    period: "Sep 2024 – May 2025",
+    detail: "Ran sports activities for the IT department's student association at Sanjivani College of Engineering.",
+  },
 ];

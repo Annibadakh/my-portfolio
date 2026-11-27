@@ -19,6 +19,8 @@ npm run preview   # serve the build
 
 - Build command: `npm run build`
 - Publish directory: `dist`
+- Node version comes from `.nvmrc` (20). No environment variables are required.
+- Optional: set `VITE_FORMSPREE_ENDPOINT` (see `.env.example`) to send preview submissions to a separate form.
 - `public/_redirects` sends every path to `index.html` so routes like `/case-studies/...` work on refresh.
 
 ## Where to edit content
