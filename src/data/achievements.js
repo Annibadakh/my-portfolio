@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset";
+
 export const publications = [
   {
     kind: "Book chapter",
@@ -13,7 +15,7 @@ export const publications = [
     venue: "Registered Design No. 454830-001 · The Patent Office, Government of India",
     year: "2025",
     note: "Registered",
-    url: "/certificates/smart-water-dispenser-design.pdf",
+    url: asset("certificates/smart-water-dispenser-design.pdf"),
   },
   {
     kind: "Copyright",
@@ -21,7 +23,7 @@ export const publications = [
     venue: "Application No. LD-20395/2025-CO · Copyright Office, Government of India",
     year: "2025",
     note: "Registered",
-    url: "/certificates/ai-security-pod-copyright.pdf",
+    url: asset("certificates/ai-security-pod-copyright.pdf"),
   },
 ];
 

@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset";
+
 // Single source of truth for personal details. Phone number is intentionally not published.
 
 export const profile = {
@@ -7,7 +9,7 @@ export const profile = {
   focus: "Backend & Full-Stack",
   location: "Maharashtra, India",
   email: "aniketbadakh1212@gmail.com",
-  resume: "/Aniket_Badakh_Resume.pdf",
+  resume: asset("Aniket_Badakh_Resume.pdf"),
   current: { title: "Software Developer I", company: "FirstCry.com", url: "https://www.firstcry.com/" },
   headline: "I build production systems that ship, scale and stay up.",
   intro:

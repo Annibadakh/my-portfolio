@@ -3,8 +3,8 @@
 Personal portfolio of Aniket Badakh, software engineer (backend & full-stack).
 Built with **React 18, Vite, Tailwind CSS 3, React Router and lucide-react**.
 
-v1 (static HTML/CSS) stays live from the `main` branch at https://annibadakh.github.io/my-portfolio/.
-This `version-2` branch is the redesign, previewed on Netlify.
+Live at https://annibadakh.github.io/my-portfolio/ (deployed from `main`). The old static HTML/CSS
+version is kept on the `old-design` branch.
 
 ## Run locally
 
@@ -15,13 +15,18 @@ npm run build     # production build in dist/
 npm run preview   # serve the build
 ```
 
-## Deploy on Netlify
+## Deploy
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node version comes from `.nvmrc` (20). No environment variables are required.
-- Optional: set `VITE_FORMSPREE_ENDPOINT` (see `.env.example`) to send preview submissions to a separate form.
-- `public/_redirects` sends every path to `index.html` so routes like `/case-studies/...` work on refresh.
+**GitHub Pages (main):** `.github/workflows/deploy-pages.yml` builds and publishes the site on every push to `main`.
+One-time setup: repo Settings → Pages → Build and deployment → Source: **GitHub Actions**.
+The workflow builds with `GITHUB_PAGES=true`, which sets Vite's base path to `/my-portfolio/`, and copies
+`index.html` to `404.html` so deep links such as `/case-studies/...` work.
+
+**Netlify (optional):** build command `npm run build`, publish directory `dist`. Node version comes from `.nvmrc`.
+`public/_redirects` handles SPA routes. No environment variables are required; optionally set
+`VITE_FORMSPREE_ENDPOINT` (see `.env.example`).
+
+Files in `public/` are linked through `asset()` in `src/utils/asset.js` so they work under either base path.
 
 ## Where to edit content
 
