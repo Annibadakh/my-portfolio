@@ -17,7 +17,7 @@ export const caseStudies = [
     period: "2025",
     role: "Solo developer: design, frontend, backend, deployment",
     links: {
-      live: "https://sanjivanifootball.netlify.app/",
+      live: "https://maidaanapp.netlify.app/",
       repo: "https://github.com/Annibadakh/football-tournament-manager-frontend",
     },
     stack: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MySQL", "Razorpay", "JWT"],

@@ -39,7 +39,7 @@ export const featuredProjects = [
     imageDark: maidaanDark,
     imageFit: "contain",
     imageBg: { light: "#FFFFFF", dark: "#0B271E" },
-    host: "sanjivanifootball.netlify.app",
+    host: "maidaanapp.netlify.app",
     problem:
       "Organisers, teams and spectators needed one place for registration, entry fees, fixtures and live scores during a multi-day tournament.",
     built: [
@@ -51,7 +51,7 @@ export const featuredProjects = [
     flow: ["React", "Express API*", "Razorpay verify", "MySQL"],
     stack: ["React.js", "Node.js", "Express.js", "MySQL", "Razorpay", "Tailwind CSS"],
     links: {
-      live: "https://sanjivanifootball.netlify.app/",
+      live: "https://maidaanapp.netlify.app/",
       repo: "https://github.com/Annibadakh/football-tournament-manager-frontend",
     },
     caseStudy: "football-tournament-manager",
@@ -98,7 +98,7 @@ export const moreProjects = [
     description: "Registration, Razorpay payments, fixtures and live scores for a college tournament with 400+ users.",
     stack: ["React.js", "Node.js", "MySQL", "Razorpay"],
     links: {
-      live: "https://sanjivanifootball.netlify.app/",
+      live: "https://maidaanapp.netlify.app/",
       repo: "https://github.com/Annibadakh/football-tournament-manager-frontend",
     },
   },
