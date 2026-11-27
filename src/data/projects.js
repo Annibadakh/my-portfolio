@@ -1,4 +1,5 @@
-import football from "../assets/projects/football.webp";
+import maidaanLight from "../assets/projects/maidaan-light.webp";
+import maidaanDark from "../assets/projects/maidaan-dark.webp";
 import prepportal from "../assets/projects/prepportal.webp";
 
 // Featured projects use the Problem → What I built → Impact card.
@@ -11,6 +12,7 @@ export const featuredProjects = [
     tagline: "Exam management platform for Dnyanganga Education",
     image: prepportal,
     imageFit: "contain",
+    imageBg: { light: "#FFFFFF", dark: "#FFFFFF" },
     host: "dnyangangaeducation.com",
     problem:
       "Thousands of students needed registration, hall tickets and results online, plus reminders on WhatsApp, often at a fixed time and without slowing the app down.",
@@ -32,7 +34,11 @@ export const featuredProjects = [
     slug: "football-tournament-manager",
     title: "Football Tournament Manager",
     tagline: "Full-stack platform for Sanjivani's Football Unity Cup",
-    image: football,
+    // Maidaan is the app's new brand name (version-2 branch of the repo).
+    image: maidaanLight,
+    imageDark: maidaanDark,
+    imageFit: "contain",
+    imageBg: { light: "#FFFFFF", dark: "#0B271E" },
     host: "sanjivanifootball.netlify.app",
     problem:
       "Organisers, teams and spectators needed one place for registration, entry fees, fixtures and live scores during a multi-day tournament.",

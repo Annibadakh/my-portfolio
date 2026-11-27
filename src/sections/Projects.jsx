@@ -69,12 +69,28 @@ function BrowserFrame({ p }) {
       </div>
       <div className="aspect-[16/10] max-w-full overflow-hidden">
         {p.image ? (
-          <img
-            src={p.image}
-            alt={`${p.title} screenshot`}
-            loading="lazy"
-            className={`h-full w-full ${p.imageFit === "contain" ? "bg-white object-contain p-4" : "object-cover object-top"}`}
-          />
+          <>
+            <img
+              src={p.image}
+              alt={`${p.title} preview`}
+              loading="lazy"
+              style={p.imageBg ? { backgroundColor: p.imageBg.light } : undefined}
+              className={`h-full w-full ${p.imageDark ? "dark:hidden" : ""} ${
+                p.imageFit === "contain" ? "object-contain p-4" : "object-cover object-top"
+              }`}
+            />
+            {p.imageDark && (
+              <img
+                src={p.imageDark}
+                alt={`${p.title} preview`}
+                loading="lazy"
+                style={p.imageBg ? { backgroundColor: p.imageBg.dark } : undefined}
+                className={`hidden h-full w-full dark:block ${
+                  p.imageFit === "contain" ? "object-contain p-4" : "object-cover object-top"
+                }`}
+              />
+            )}
+          </>
         ) : (
           <div className="grid h-full content-center gap-2 bg-chip p-4 font-mono text-[11px]" aria-label="Illustration of categorised spending">
             <div className="flex justify-between border-b border-dashed border-accent/40 pb-1.5">

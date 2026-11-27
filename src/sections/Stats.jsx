@@ -45,7 +45,7 @@ function Counter({ value, suffix }) {
 
 export default function Stats() {
   return (
-    <section aria-label="Impact in numbers" className="pt-16">
+    <section aria-label="Impact in numbers" className="pt-12">
       <div className="container">
         <dl className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {stats.map((s) => (
