@@ -1,17 +1,57 @@
-# My Personal Portfolio
+# Aniket Badakh · Portfolio v2
 
-Welcome to my personal portfolio website! This project showcases my professional journey, including my skills, roles, projects, educational background, and achievements. It also provides a platform for visitors to get in touch with me for job opportunities, collaborations, or project inquiries.
+Personal portfolio of Aniket Badakh, software engineer (backend & full-stack).
+Built with **React 18, Vite, Tailwind CSS 3, React Router and lucide-react**.
 
-## Introduction
+v1 (static HTML/CSS) stays live from the `main` branch at https://annibadakh.github.io/my-portfolio/.
+This `version-2` branch is the redesign, previewed on Netlify.
 
-This portfolio website is designed to present my professional information in a clear, organized manner. It serves as a digital resume, providing potential employers, clients, or collaborators with detailed insights into my background, skills, and achievements, while also offering an easy way to contact me for opportunities and inquiries.
+## Run locally
 
-## Features
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production build in dist/
+npm run preview   # serve the build
+```
 
-- **Home Page**: An overview of who I am and what I do.
-- **About Me**: Detailed information about my background, including my educational journey.
-- **Skills**: A list of my professional skills and proficiencies.
-- **Projects**: Showcase of various projects I have worked on, including descriptions, technologies used, and my role in each project.
-- **Achievements**: Highlights of my notable achievements and recognitions.
-- **Contact Form**: A form for visitors to reach out to me for job opportunities, collaborations, or other inquiries.
+## Deploy on Netlify
 
+- Build command: `npm run build`
+- Publish directory: `dist`
+- `public/_redirects` sends every path to `index.html` so routes like `/case-studies/...` work on refresh.
+
+## Where to edit content
+
+All text lives in `src/data/`, so most updates don't touch JSX:
+
+| File | What it holds |
+|---|---|
+| `profile.js` | name, intro, about, email, social links, hero stats, form endpoint |
+| `experience.js` | jobs for the Experience timeline |
+| `projects.js` | featured projects and "More projects" cards |
+| `caseStudies.js` | case study pages (architecture lanes, flows, decisions) |
+| `skills.js` | grouped skills |
+| `achievements.js` | publications, achievements, certifications, education |
+
+The resume PDF is `public/Aniket_Badakh_Resume.pdf`. Replace the file to update it.
+
+## Theme
+
+Colours are CSS variables in `src/index.css` (Graphite Violet palette: light values on `:root`, dark on `.dark`),
+mapped to Tailwind names in `tailwind.config.js` (`bg`, `surface`, `ink`, `muted`, `line`, `accent`, `second`, `chip`).
+The theme toggle stores the visitor's choice in `localStorage` and otherwise follows the OS setting.
+
+Fonts: Syne (headings), Manrope (body), IBM Plex Mono (labels and code).
+
+## Structure
+
+```
+src/
+  components/layout/   Header, Footer, Layout, ThemeToggle
+  components/ui/       Section, ArchitectureDiagram, BrandIcons, ExternalLink
+  sections/            Hero, Stats, About, Experience, Projects, CaseStudies, Skills, Achievements, Contact
+  pages/               Home, CaseStudy, NotFound
+  data/                all content
+  context/             ThemeContext
+```

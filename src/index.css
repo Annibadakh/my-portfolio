@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Graphite Violet palette. Values are RGB channels so Tailwind opacity modifiers work (bg-accent/10). */
+@layer base {
+  :root {
+    --c-bg: 247 246 250;
+    --c-surface: 255 255 255;
+    --c-ink: 22 20 28;
+    --c-muted: 91 88 104;
+    --c-line: 226 224 234;
+    --c-accent: 106 69 245;
+    --c-accent-ink: 87 51 224;
+    --c-on-accent: 255 255 255;
+    --c-second: 30 155 215;
+    --c-chip: 238 234 253;
+    color-scheme: light;
+  }
+
+  .dark {
+    --c-bg: 16 15 20;
+    --c-surface: 24 23 31;
+    --c-ink: 236 234 243;
+    --c-muted: 163 160 178;
+    --c-line: 42 40 51;
+    --c-accent: 156 134 255;
+    --c-accent-ink: 174 156 255;
+    --c-on-accent: 16 15 20;
+    --c-second: 92 196 242;
+    --c-chip: 36 32 58;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    @apply bg-accent/25;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.14em] text-accent-ink;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-surface;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-md bg-chip px-2 py-0.5 font-mono text-[11px] text-ink;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-on-accent hover:brightness-110;
+  }
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-accent hover:text-accent-ink;
+  }
+  .link {
+    @apply text-accent-ink underline-offset-4 hover:underline;
+  }
+}
