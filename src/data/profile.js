@@ -12,6 +12,9 @@ export const profile = {
   headline: "I build production systems that ship, scale and stay up.",
   intro:
     "Software engineer working with Node.js, TypeScript, React.js, SQL and AWS. I build production web applications and own them end to end, from requirements through QA, deployment and production support.",
+  // Shown on the right side of the hero.
+  introSecondary:
+    "Backend-first: event-driven services on AWS SQS, Lambda and EventBridge, payment integrations, and APIs secured with JWT and role-based access control.",
   about: [
     "I'm a software engineer with a B.Tech in Information Technology (CGPA 8.6) and experience across a full-time role, an internship and freelance product work.",
     "Most of my work is on the backend: event-driven AWS services with SQS, Lambda and EventBridge, payment integrations, APIs secured with JWT and role-based access control, and LLMs wired into query interfaces. I'm comfortable on the frontend too, with React and Tailwind CSS.",
