@@ -19,7 +19,7 @@ export const caseStudies = [
       { value: "30 s", label: "live score refresh" },
     ],
     problem:
-      "Sanjivani's Football Unity Cup 2025 ran on spreadsheets and phone calls: team registration, entry-fee collection, fixtures and scores were all manual, and spectators had no single place to follow matches.",
+      "Sanjivani's Football Unity Cup 2025 needed one place for organisers, teams and spectators: team registration, entry-fee collection, fixtures and live scores across a multi-day event.",
     architecture: [
       { label: "Clients", nodes: ["Public site", "Admin / captain / scorer dashboards"] },
       { label: "API", nodes: ["Express REST API", "JWT + role checks"], hot: true },
@@ -86,7 +86,7 @@ export const caseStudies = [
       { value: "4", label: "AWS services wired together" },
     ],
     problem:
-      "PrepPortal had to send hall tickets, reminders and results to thousands of students on WhatsApp, often at a fixed time. Sending them inside the web request was slow, hit provider rate limits and gave no record of what was delivered.",
+      "PrepPortal had to send hall tickets, reminders and results to thousands of students on WhatsApp, often at a fixed time. Sending them inside a web request would be slow, would run into provider rate limits and would leave no record of what was delivered.",
     architecture: [
       { label: "Trigger", nodes: ["Admin dashboard", "EventBridge Scheduler"] },
       { label: "Producer", nodes: ["Node.js API"], hot: true },
