@@ -1,7 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import Section from "../components/ui/Section";
 import { profile } from "../data/profile";
-import { education } from "../data/achievements";
 
 export default function About() {
   return (
@@ -31,17 +30,6 @@ export default function About() {
             </ul>
           </div>
 
-          {education.map((e) => (
-            <div key={e.degree} id="education" className="card p-5">
-              <p className="eyebrow mb-2">Education</p>
-              <p className="font-semibold">{e.degree}</p>
-              <p className="text-sm text-muted">{e.school}</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                <span className="chip">{e.period}</span>
-                <span className="chip">{e.score}</span>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </Section>

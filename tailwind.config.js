@@ -27,9 +27,9 @@ export default {
         chip: token("chip"),
       },
       fontFamily: {
-        display: ['"Syne"', "system-ui", "sans-serif"],
-        sans: ['"Manrope"', "system-ui", "-apple-system", '"Segoe UI"', "sans-serif"],
-        mono: ['"IBM Plex Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        display: ['"Space Grotesk"', "system-ui", "sans-serif"],
+        sans: ['"Inter"', "system-ui", "-apple-system", '"Segoe UI"', "sans-serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       maxWidth: { prose: "65ch" },
       keyframes: {

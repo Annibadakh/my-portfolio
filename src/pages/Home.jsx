@@ -6,6 +6,7 @@ import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
 import CaseStudies from "../sections/CaseStudies";
 import Skills from "../sections/Skills";
+import Education from "../sections/Education";
 import Achievements from "../sections/Achievements";
 import Contact from "../sections/Contact";
 
@@ -23,6 +24,7 @@ export default function Home() {
       <Projects />
       <CaseStudies />
       <Skills />
+      <Education />
       <Achievements />
       <Contact />
     </>

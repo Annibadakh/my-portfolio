@@ -44,7 +44,7 @@ Colours are CSS variables in `src/index.css` (Graphite Violet palette: light val
 mapped to Tailwind names in `tailwind.config.js` (`bg`, `surface`, `ink`, `muted`, `line`, `accent`, `second`, `chip`).
 The theme toggle stores the visitor's choice in `localStorage` and otherwise follows the OS setting.
 
-Fonts: Syne (headings), Manrope (body), IBM Plex Mono (labels and code).
+Fonts: Space Grotesk (headings), Inter (body), JetBrains Mono (labels and code).
 
 ## Structure
 

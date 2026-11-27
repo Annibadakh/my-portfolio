@@ -49,11 +49,27 @@ export const certifications = [
   { title: "HTML and CSS: Building a Single-Page Website", issuer: "Online course" },
 ];
 
+// Newest first.
 export const education = [
   {
+    level: "Graduation",
     degree: "B.Tech, Information Technology",
     school: "Sanjivani College of Engineering, Kopargaon",
-    period: "Nov 2022 – Jun 2026",
+    period: "2022 – 2026",
     score: "CGPA 8.6 / 10",
+  },
+  {
+    level: "Higher Secondary (12th)",
+    degree: "Higher Secondary Education",
+    school: "Chhatrapati Shivaji Preparatory Jr. College",
+    period: "2020 – 2022",
+    score: "72.80%",
+  },
+  {
+    level: "Secondary (10th)",
+    degree: "Primary & Secondary Education",
+    school: "Ramrao Adik Public School",
+    period: "2010 – 2020",
+    score: "86.80%",
   },
 ];
