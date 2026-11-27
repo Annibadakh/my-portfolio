@@ -5,6 +5,14 @@ export const caseStudies = [
   {
     slug: "football-tournament-manager",
     title: "Football Tournament Manager",
+    // Short decision record shown on the home page.
+    adr: {
+      context: "Entry fees had to be collected online and trusted before a team could play.",
+      decision:
+        "Create Razorpay orders on the server and verify every payment signature there; record failures as well as successes.",
+      why: "The browser can be tampered with. Server-side verification closes the easiest way to fake a paid registration.",
+      result: "Registration, payments, fixtures and live scores ran through the app for 400+ users.",
+    },
     subtitle: "Running a live college tournament for 400+ users on one full-stack app",
     period: "2025",
     role: "Solo developer: design, frontend, backend, deployment",
@@ -72,6 +80,13 @@ export const caseStudies = [
   {
     slug: "prepportal-messaging",
     title: "PrepPortal messaging pipeline",
+    adr: {
+      context: "Batches of 1,000+ WhatsApp messages, often scheduled, sent from an app that must stay responsive.",
+      decision:
+        "Enqueue sends on AWS SQS and process them with Lambda workers triggered by EventBridge Scheduler; store delivery status per message.",
+      why: "A queue absorbs bursts and retries failures; serverless workers scale with exam-time spikes and cost nothing in between.",
+      result: "1,000+ messages per batch with scheduling and delivery tracking for 5,000+ students.",
+    },
     subtitle: "Event-driven WhatsApp delivery for an exam platform serving 5,000+ students",
     period: "2025 – 2026",
     role: "Freelance developer for Dnyanganga Education: design, build, deployment and support",
