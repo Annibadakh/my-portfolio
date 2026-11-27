@@ -1,6 +1,6 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, BadgeCheck, Code2, Globe, Lock } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, Code2, Cpu, Gamepad2, Globe, LineChart, Lock, Monitor, Network } from "lucide-react";
 import Section from "../components/ui/Section";
 import ExternalLink from "../components/ui/ExternalLink";
 import { featuredProjects, moreProjects } from "../data/projects";
@@ -154,53 +154,90 @@ function FeaturedCard({ p }) {
   );
 }
 
-function Archive() {
+const FILTERS = [
+  { key: "all", label: "All", match: () => true },
+  { key: "web", label: "Web apps", match: (p) => p.category === "web" || p.category === "game" },
+  { key: "iot", label: "IoT & hardware", match: (p) => p.category === "iot" },
+  { key: "data", label: "Data & algorithms", match: (p) => p.category === "data" || p.category === "algo" },
+];
+
+const CATEGORY_ICONS = { web: Monitor, iot: Cpu, data: LineChart, algo: Network, game: Gamepad2 };
+
+function ProjectTile({ p }) {
+  const Icon = CATEGORY_ICONS[p.category] ?? Monitor;
   return (
-    <div className="card overflow-hidden">
-      <div className="hidden grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)_minmax(0,1.3fr)_auto] gap-4 border-b border-line bg-chip/40 px-5 py-2.5 font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted md:grid">
-        <span>Project</span>
-        <span>What it is</span>
-        <span>Stack</span>
-        <span className="text-right">Links</span>
+    <article className="card flex min-w-0 flex-col gap-3 p-5 transition duration-200 hover:-translate-y-0.5 hover:border-accent motion-reduce:transform-none">
+      <div className="flex items-center justify-between gap-3">
+        <span className="grid h-10 w-10 place-items-center rounded-xl bg-accent/10 text-accent-ink">
+          <Icon size={20} />
+        </span>
+        <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-muted">{p.categoryLabel}</span>
       </div>
-      <ul>
-        {moreProjects.map((p) => (
-          <li
-            key={p.title}
-            className="grid gap-2 border-t border-line px-5 py-4 transition first:border-t-0 hover:bg-accent/5 md:grid-cols-[minmax(0,1.1fr)_minmax(0,2fr)_minmax(0,1.3fr)_auto] md:items-center md:gap-4"
-          >
-            <div className="min-w-0">
-              <p className="font-display font-bold">{p.title}</p>
-              {p.badge && (
-                <p className="mt-1 inline-flex items-center gap-1 font-mono text-[10.5px] text-second">
-                  <BadgeCheck size={12} /> {p.badge}
-                </p>
-              )}
-            </div>
-            <p className="text-sm text-muted">{p.description}</p>
-            <ul className="flex flex-wrap gap-1.5">
-              {p.stack.map((s) => (
-                <li key={s} className="chip">
-                  {s}
-                </li>
-              ))}
-            </ul>
-            <div className="flex gap-4 md:justify-end">
-              {p.links.live && (
-                <ExternalLink href={p.links.live} className={linkCls} aria-label={`${p.title} live site`}>
-                  <Globe size={15} /> Live
-                </ExternalLink>
-              )}
-              {p.links.repo && (
-                <ExternalLink href={p.links.repo} className={linkCls} aria-label={`${p.title} source code`}>
-                  <Code2 size={15} /> Code
-                </ExternalLink>
-              )}
-            </div>
-          </li>
+      <h4 className="text-lg font-bold">{p.title}</h4>
+      {p.badge && (
+        <span className="inline-flex w-fit items-center gap-1.5 whitespace-nowrap rounded-md border border-second/40 bg-second/10 px-2 py-1 font-mono text-[10.5px] text-ink">
+          <BadgeCheck size={13} className="text-second" /> {p.badge}
+        </span>
+      )}
+      <p className="text-sm text-muted">{p.description}</p>
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-1">
+        <ul className="flex flex-wrap gap-1.5" aria-label="Tech stack">
+          {p.stack.map((s) => (
+            <li key={s} className="chip">
+              {s}
+            </li>
+          ))}
+        </ul>
+        <div className="flex gap-4">
+          {p.links.live && (
+            <ExternalLink href={p.links.live} className={linkCls} aria-label={`${p.title} live site`}>
+              <Globe size={15} /> Live
+            </ExternalLink>
+          )}
+          {p.links.repo && (
+            <ExternalLink href={p.links.repo} className={linkCls} aria-label={`${p.title} source code`}>
+              <Code2 size={15} /> Code
+            </ExternalLink>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function MoreProjects() {
+  const [filter, setFilter] = useState("all");
+  const active = FILTERS.find((f) => f.key === filter) ?? FILTERS[0];
+  const shown = moreProjects.filter(active.match);
+
+  return (
+    <>
+      <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter projects">
+        {FILTERS.map((f) => {
+          const count = moreProjects.filter(f.match).length;
+          const on = f.key === filter;
+          return (
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => setFilter(f.key)}
+              aria-pressed={on}
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                on ? "border-accent bg-accent text-on-accent" : "border-line bg-surface text-ink hover:border-accent"
+              }`}
+            >
+              {f.label}
+              <span className={`font-mono text-xs ${on ? "opacity-80" : "text-muted"}`}>{count}</span>
+            </button>
+          );
+        })}
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" aria-live="polite">
+        {shown.map((p) => (
+          <ProjectTile key={p.title} p={p} />
         ))}
-      </ul>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -210,7 +247,7 @@ export default function Projects() {
       id="projects"
       eyebrow="Projects"
       title="Things I've built and shipped"
-      intro="Each featured project shows the problem, what I built and what it achieved. Smaller and older work is listed below."
+      intro="Each featured project shows the problem, what I built and what it achieved. Smaller and older work is below, filterable by type."
     >
       <div className="space-y-6">
         {featuredProjects.map((p) => (
@@ -219,7 +256,7 @@ export default function Projects() {
       </div>
 
       <h3 className="mb-5 mt-16 text-xl font-bold">More projects</h3>
-      <Archive />
+      <MoreProjects />
     </Section>
   );
 }

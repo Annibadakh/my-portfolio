@@ -70,53 +70,70 @@ export const featuredProjects = [
   },
 ];
 
-// Smaller and older projects, shown as a compact archive list.
+// Smaller and older projects, shown as filterable tiles.
+// category: web | iot | data | algo | game (data + algo share the "Data & algorithms" filter, game sits under Web apps).
 export const moreProjects = [
   {
     title: "Smart Water Dispenser",
-    badge: "Registered Design No. 454830-001",
+    category: "iot",
+    categoryLabel: "IoT & hardware",
+    badge: "Registered Design 454830-001",
     description: "IoT system that reads water and room temperature and drives a cooler and heater to hold the water at a comfortable temperature.",
     stack: ["Arduino", "Sensors", "IoT"],
     links: {},
   },
   {
     title: "Yuvatech Computers",
+    category: "web",
+    categoryLabel: "Web app",
     description: "Dynamic website for a computer institute: courses, faculty, achievements and an expenses module.",
     stack: ["React.js", "Node.js", "MySQL"],
     links: { live: "https://yuvatech-computers.org.in/" },
   },
   {
     title: "Drone Survey Platform",
+    category: "web",
+    categoryLabel: "Web app",
     description: "Web platform for planning and managing drone survey missions.",
     stack: ["React.js", "Node.js"],
     links: { live: "https://drone-survey-management.netlify.app/" },
   },
   {
     title: "Note Taking App",
+    category: "web",
+    categoryLabel: "Web app",
     description: "Lightweight note-taking web app.",
     stack: ["React.js"],
     links: { live: "https://app-note-taking.netlify.app/" },
   },
   {
     title: "Comment Insights Tool",
+    category: "data",
+    categoryLabel: "Data",
     description: "VADER sentiment analysis of YouTube comments, with charts of the results.",
     stack: ["Python", "VADER"],
     links: { repo: "https://github.com/Annibadakh/Comment-Insights-Tool" },
   },
   {
     title: "Cash Flow Minimizer",
+    category: "algo",
+    categoryLabel: "Algorithms",
     description: "Graph algorithm that settles a group's debts with the fewest transactions.",
     stack: ["Java", "Graphs"],
     links: { repo: "https://github.com/Annibadakh/Cash-Flow-Minimizer-" },
   },
   {
     title: "Budget Buddy",
+    category: "web",
+    categoryLabel: "Web app",
     description: "Expense tracker with a React frontend and a Node.js backend.",
     stack: ["React.js", "Node.js"],
     links: { repo: "https://github.com/Annibadakh/budget-buddy" },
   },
   {
     title: "Stone Paper Scissors",
+    category: "game",
+    categoryLabel: "Game",
     description: "Browser game with live scoring against the computer.",
     stack: ["JavaScript"],
     links: {
