@@ -63,12 +63,12 @@ export default function Hero() {
 
         <div className="relative grid gap-8 lg:grid-cols-[1fr_minmax(0,26rem)_1fr] lg:gap-6">
           {/* Portrait */}
-          <div className="relative z-10 order-1 mt-1 flex justify-center sm:-mt-8 lg:order-2 lg:-mt-16">
+          <div className="relative z-10 order-1 mt-1 flex justify-center sm:-mt-10 lg:order-2 lg:-mt-24">
             <img
               src={portrait}
               alt={`Portrait of ${profile.name}`}
-              width="447"
-              height="529"
+              width="900"
+              height="1125"
               style={portraitMask}
               className="w-full max-w-[20rem] animate-fade-up object-contain object-bottom [animation-delay:120ms] sm:max-w-[24rem] lg:max-w-none"
             />
