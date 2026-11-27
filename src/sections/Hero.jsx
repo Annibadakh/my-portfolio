@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, FileDown, Mail, MapPin } from "lucide-react";
+import { ArrowRight, FileDown, Mail } from "lucide-react";
 import portrait from "../assets/aniket-cutout.webp";
 import { profile } from "../data/profile";
 import ExternalLink from "../components/ui/ExternalLink";
@@ -34,17 +34,16 @@ function Socials() {
   );
 }
 
-// Speech bubble whose tail points at the portrait: toward the centre on desktop
-// (bottom-right for the left bubble, bottom-left for the right one). On phones only the
-// first bubble, which sits right under the photo, keeps a tail (pointing up).
+// Speech bubble whose tail points at the portrait (bottom-right for the left bubble,
+// bottom-left for the right one). Desktop only; hidden on phones and tablets.
 function Bubble({ side, label, children }) {
   const tail =
     side === "left"
-      ? "left-8 -top-[7px] border-l border-t lg:left-auto lg:right-10 lg:top-auto lg:-bottom-[7px] lg:border-l-0 lg:border-t-0 lg:border-b lg:border-r"
-      : "hidden lg:block lg:left-10 lg:-bottom-[7px] lg:border-b lg:border-r";
+      ? "right-10 -bottom-[7px] border-b border-r"
+      : "left-10 -bottom-[7px] border-b border-r";
   return (
     <div
-      className={`relative w-full max-w-xs rounded-2xl border border-line bg-surface px-5 py-4 text-left shadow-lg shadow-accent/10 ${
+      className={`relative hidden w-full max-w-xs rounded-2xl lg:block border border-line bg-surface px-5 py-4 text-left shadow-lg shadow-accent/10 ${
         side === "right" ? "lg:ml-auto" : ""
       }`}
     >
@@ -98,14 +97,14 @@ export default function Hero() {
             />
           </div>
 
-          {/* Left: short description (middle) · status, location and actions (bottom) */}
+          {/* Left: speech bubble (middle) · actions and current role (bottom) */}
           <div className="order-2 flex min-w-0 flex-col gap-6 lg:order-1 lg:justify-between lg:pb-12 lg:pt-6">
             <Bubble side="left" label="How I work">
               I build production web apps and own them end to end, from requirements and QA to deployment and support.
             </Bubble>
 
-            <div className="flex flex-col items-start gap-4">
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col items-center gap-4 lg:items-start">
+            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link to="/#projects" className="btn-primary rounded-full px-5">
                 View projects <ArrowRight size={16} />
               </Link>
@@ -114,7 +113,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 lg:justify-start">
               <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/90 py-2 pl-2.5 pr-4 text-sm shadow-sm backdrop-blur">
                 <span className="relative grid h-5 w-5 place-items-center rounded-full bg-second/20">
                   <span className="h-2 w-2 animate-pulse-dot rounded-full bg-second" />
@@ -124,20 +123,17 @@ export default function Hero() {
                   {profile.current.company}
                 </ExternalLink>
               </span>
-              <span className="inline-flex items-center gap-1.5 text-sm text-muted">
-                <MapPin size={14} /> {profile.location}
-              </span>
             </div>
             </div>
           </div>
 
           {/* Right: short description (middle) · stack + socials (bottom) */}
-          <div className="order-3 flex min-w-0 flex-col gap-6 lg:items-end lg:justify-between lg:pb-12 lg:pt-6 lg:text-right">
+          <div className="order-3 flex min-w-0 flex-col items-center gap-6 text-center lg:items-end lg:justify-between lg:pb-12 lg:pt-6 lg:text-right">
             <Bubble side="right" label="What I focus on">
-              Backend-first: event-driven AWS services, payment integrations and secure APIs with Node.js and TypeScript.
+              Backend-first: event-driven AWS services, payments and secure APIs with Node.js and TypeScript.
             </Bubble>
 
-            <div className="flex flex-col gap-4 lg:items-end">
+            <div className="flex flex-col items-center gap-4 lg:items-end">
               <p className="font-mono text-xs text-muted">
                 <span className="mr-2 uppercase tracking-[0.14em]">Stack</span>
                 <span className="text-ink">Node.js · TypeScript · React · AWS</span>
