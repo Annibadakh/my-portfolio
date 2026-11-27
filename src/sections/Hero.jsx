@@ -74,9 +74,14 @@ export default function Hero() {
             />
           </div>
 
-          {/* Left: status pill (middle) · actions (bottom) */}
+          {/* Left: short description (middle) · status, location and actions (bottom) */}
           <div className="order-2 flex min-w-0 flex-col gap-6 lg:order-1 lg:justify-between lg:pb-12 lg:pt-28">
-            <div className="flex flex-col items-start gap-3">
+            <p className="max-w-xs text-muted lg:text-[17px]">
+              I build production web apps and own them end to end, from requirements and QA to deployment and support.
+            </p>
+
+            <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/90 py-2 pl-2.5 pr-4 text-sm shadow-sm backdrop-blur">
                 <span className="relative grid h-5 w-5 place-items-center rounded-full bg-second/20">
                   <span className="h-2 w-2 animate-pulse-dot rounded-full bg-second" />
@@ -86,7 +91,7 @@ export default function Hero() {
                   {profile.current.company}
                 </ExternalLink>
               </span>
-              <span className="inline-flex items-center gap-1.5 pl-1 text-sm text-muted">
+              <span className="inline-flex items-center gap-1.5 text-sm text-muted">
                 <MapPin size={14} /> {profile.location}
               </span>
             </div>
@@ -99,12 +104,13 @@ export default function Hero() {
                 <FileDown size={16} /> Resume
               </a>
             </div>
+            </div>
           </div>
 
-          {/* Right: description (middle) · stack + socials (bottom) */}
-          <div className="order-3 flex min-w-0 flex-col gap-6 lg:justify-between lg:pb-12 lg:pt-28">
+          {/* Right: short description (middle) · stack + socials (bottom) */}
+          <div className="order-3 flex min-w-0 flex-col gap-6 lg:items-end lg:justify-between lg:pb-12 lg:pt-28 lg:text-right">
             <p className="max-w-xs text-muted lg:text-[17px]">
-              I build production systems that ship, scale and stay up, with Node.js, TypeScript, React.js, SQL and AWS.
+              Backend-first: event-driven AWS services, payment integrations and secure APIs with Node.js and TypeScript.
             </p>
 
             <div className="flex flex-col gap-4 lg:items-end">
