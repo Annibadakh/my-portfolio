@@ -81,6 +81,15 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col items-start gap-4">
+            <div className="flex flex-wrap gap-3">
+              <Link to="/#projects" className="btn-primary rounded-full px-5">
+                View projects <ArrowRight size={16} />
+              </Link>
+              <a href={profile.resume} download className="btn-ghost rounded-full bg-surface/80 px-5 backdrop-blur">
+                <FileDown size={16} /> Resume
+              </a>
+            </div>
+
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-surface/90 py-2 pl-2.5 pr-4 text-sm shadow-sm backdrop-blur">
                 <span className="relative grid h-5 w-5 place-items-center rounded-full bg-second/20">
@@ -94,15 +103,6 @@ export default function Hero() {
               <span className="inline-flex items-center gap-1.5 text-sm text-muted">
                 <MapPin size={14} /> {profile.location}
               </span>
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <Link to="/#projects" className="btn-primary rounded-full px-5">
-                View projects <ArrowRight size={16} />
-              </Link>
-              <a href={profile.resume} download className="btn-ghost rounded-full bg-surface/80 px-5 backdrop-blur">
-                <FileDown size={16} /> Resume
-              </a>
             </div>
             </div>
           </div>
