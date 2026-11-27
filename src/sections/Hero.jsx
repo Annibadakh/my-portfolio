@@ -34,6 +34,30 @@ function Socials() {
   );
 }
 
+// Speech bubble whose tail points at the portrait: toward the centre on desktop
+// (bottom-right for the left bubble, bottom-left for the right one). On phones only the
+// first bubble, which sits right under the photo, keeps a tail (pointing up).
+function Bubble({ side, label, children }) {
+  const tail =
+    side === "left"
+      ? "left-8 -top-[7px] border-l border-t lg:left-auto lg:right-10 lg:top-auto lg:-bottom-[7px] lg:border-l-0 lg:border-t-0 lg:border-b lg:border-r"
+      : "hidden lg:block lg:left-10 lg:-bottom-[7px] lg:border-b lg:border-r";
+  return (
+    <div
+      className={`relative w-full max-w-xs rounded-2xl border border-line bg-surface px-5 py-4 text-left shadow-lg shadow-accent/10 ${
+        side === "right" ? "lg:ml-auto" : ""
+      }`}
+    >
+      <span aria-hidden className={`absolute h-3.5 w-3.5 rotate-45 border-line bg-surface ${tail}`} />
+      <p className="mb-1.5 flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.14em] text-accent-ink">
+        <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+        {label}
+      </p>
+      <p className="text-[15px] leading-relaxed text-ink/85">{children}</p>
+    </div>
+  );
+}
+
 export default function Hero() {
   const first = profile.name.split(" ")[0];
   return (
@@ -76,9 +100,9 @@ export default function Hero() {
 
           {/* Left: short description (middle) · status, location and actions (bottom) */}
           <div className="order-2 flex min-w-0 flex-col gap-6 lg:order-1 lg:justify-between lg:pb-12 lg:pt-28">
-            <p className="max-w-xs text-muted lg:text-[17px]">
+            <Bubble side="left" label="How I work">
               I build production web apps and own them end to end, from requirements and QA to deployment and support.
-            </p>
+            </Bubble>
 
             <div className="flex flex-col items-start gap-4">
             <div className="flex flex-wrap gap-3">
@@ -109,9 +133,9 @@ export default function Hero() {
 
           {/* Right: short description (middle) · stack + socials (bottom) */}
           <div className="order-3 flex min-w-0 flex-col gap-6 lg:items-end lg:justify-between lg:pb-12 lg:pt-28 lg:text-right">
-            <p className="max-w-xs text-muted lg:text-[17px]">
+            <Bubble side="right" label="What I focus on">
               Backend-first: event-driven AWS services, payment integrations and secure APIs with Node.js and TypeScript.
-            </p>
+            </Bubble>
 
             <div className="flex flex-col gap-4 lg:items-end">
               <p className="font-mono text-xs text-muted">
