@@ -74,7 +74,7 @@ function BrowserFrame({ p }) {
               src={p.image}
               alt={`${p.title} preview`}
               loading="lazy"
-              style={p.imageBg ? { backgroundColor: p.imageBg.light } : undefined}
+              style={p.imageBg?.light ? { backgroundColor: p.imageBg.light } : undefined}
               className={`h-full w-full ${p.imageDark ? "dark:hidden" : ""} ${
                 p.imageFit === "contain" ? "object-contain p-4" : "object-cover object-top"
               }`}
@@ -84,7 +84,7 @@ function BrowserFrame({ p }) {
                 src={p.imageDark}
                 alt={`${p.title} preview`}
                 loading="lazy"
-                style={p.imageBg ? { backgroundColor: p.imageBg.dark } : undefined}
+                style={p.imageBg?.dark ? { backgroundColor: p.imageBg.dark } : undefined}
                 className={`hidden h-full w-full dark:block ${
                   p.imageFit === "contain" ? "object-contain p-4" : "object-cover object-top"
                 }`}

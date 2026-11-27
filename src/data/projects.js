@@ -1,6 +1,7 @@
 import maidaanLight from "../assets/projects/maidaan-light.webp";
 import maidaanDark from "../assets/projects/maidaan-dark.webp";
 import prepportal from "../assets/projects/prepportal.webp";
+import prepportalDark from "../assets/projects/prepportal-dark.webp";
 
 // Featured projects use the Problem → What I built → Impact card.
 // `flow` is the small system strip; a trailing * highlights a node.
@@ -11,8 +12,10 @@ export const featuredProjects = [
     title: "PrepPortal",
     tagline: "Exam management platform for Dnyanganga Education",
     image: prepportal,
+    imageDark: prepportalDark,
     imageFit: "contain",
-    imageBg: { light: "#FFFFFF", dark: "#FFFFFF" },
+    // Dark mode: recoloured logo on the page's own dark background.
+    imageBg: { light: "#FFFFFF" },
     host: "dnyangangaeducation.com",
     problem:
       "Thousands of students needed registration, hall tickets and results online, plus reminders on WhatsApp, often at a fixed time and without slowing the app down.",
