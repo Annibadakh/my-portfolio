@@ -63,7 +63,7 @@ export const experience = [
   {
     role: "Software Development Engineer",
     company: "TwinsisTech",
-    type: "Full-stack",
+    type: "Internship",
     start: "May 2024",
     end: "Feb 2025",
     summary: "Full-stack developer.",

@@ -10,7 +10,7 @@ export default function Experience() {
       id="experience"
       eyebrow="Experience"
       title="Where I've shipped"
-      intro="A full-time role, two internships, freelance work and an early SDE role, mostly on software that real users depend on."
+      intro="A full-time role, three internships and freelance work, mostly on software that real users depend on."
     >
       <ol className="relative space-y-6 border-l border-line pl-6 sm:pl-8">
         {experience.map((job) => (

@@ -16,7 +16,7 @@ export const profile = {
   introSecondary:
     "Backend-first: event-driven services on AWS SQS, Lambda and EventBridge, payment integrations, and APIs secured with JWT and role-based access control.",
   about: [
-    "I'm a software engineer with a B.Tech in Information Technology (CGPA 8.6) and experience across a full-time role, an internship and freelance product work.",
+    "I'm a software engineer with a B.Tech in Information Technology (CGPA 8.6) and experience across a full-time role, internships and freelance product work.",
     "Most of my work is on the backend: event-driven AWS services with SQS, Lambda and EventBridge, payment integrations, APIs secured with JWT and role-based access control, and LLMs wired into query interfaces. I'm comfortable on the frontend too, with React and Tailwind CSS.",
     "I like owning delivery end to end: gathering requirements, writing unit tests, running QA and UAT with the client, deploying, documenting, and fixing whatever breaks in production.",
   ],
