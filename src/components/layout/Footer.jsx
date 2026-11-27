@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container pb-8 font-mono text-xs text-muted">
-        © {new Date().getFullYear()} {profile.name}. Built with React and Tailwind CSS.
+        © {new Date().getFullYear()} {profile.name}.
       </div>
     </footer>
   );

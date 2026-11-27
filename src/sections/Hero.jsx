@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
 
           {/* Left: short description (middle) · status, location and actions (bottom) */}
-          <div className="order-2 flex min-w-0 flex-col gap-6 lg:order-1 lg:justify-between lg:pb-12 lg:pt-28">
+          <div className="order-2 flex min-w-0 flex-col gap-6 lg:order-1 lg:justify-between lg:pb-12 lg:pt-6">
             <Bubble side="left" label="How I work">
               I build production web apps and own them end to end, from requirements and QA to deployment and support.
             </Bubble>
@@ -132,7 +132,7 @@ export default function Hero() {
           </div>
 
           {/* Right: short description (middle) · stack + socials (bottom) */}
-          <div className="order-3 flex min-w-0 flex-col gap-6 lg:items-end lg:justify-between lg:pb-12 lg:pt-28 lg:text-right">
+          <div className="order-3 flex min-w-0 flex-col gap-6 lg:items-end lg:justify-between lg:pb-12 lg:pt-6 lg:text-right">
             <Bubble side="right" label="What I focus on">
               Backend-first: event-driven AWS services, payment integrations and secure APIs with Node.js and TypeScript.
             </Bubble>

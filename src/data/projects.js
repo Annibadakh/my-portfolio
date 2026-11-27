@@ -73,6 +73,37 @@ export const featuredProjects = [
 // Smaller and older projects, shown as filterable tiles.
 // category: web | iot | data | algo | game (data + algo share the "Data & algorithms" filter, game sits under Web apps).
 export const moreProjects = [
+  // The three featured projects also appear here so the filters show everything.
+  {
+    title: "PrepPortal",
+    category: "web",
+    categoryLabel: "Web app",
+    description: "Exam management platform for Dnyanganga Education with an event-driven WhatsApp pipeline on AWS. 5,000+ students.",
+    stack: ["React.js", "Node.js", "AWS SQS", "Lambda"],
+    links: {
+      live: "https://dnyangangaeducation.com/",
+      repo: "https://github.com/Annibadakh/dnyanganga-eduaction-frontend",
+    },
+  },
+  {
+    title: "Football Tournament Manager",
+    category: "web",
+    categoryLabel: "Web app",
+    description: "Registration, Razorpay payments, fixtures and live scores for a college tournament with 400+ users.",
+    stack: ["React.js", "Node.js", "MySQL", "Razorpay"],
+    links: {
+      live: "https://sanjivanifootball.netlify.app/",
+      repo: "https://github.com/Annibadakh/football-tournament-manager-frontend",
+    },
+  },
+  {
+    title: "AI Personal CFO",
+    category: "data",
+    categoryLabel: "AI & data",
+    description: "Categorises UPI and bank transactions and forecasts balances 1–12 months ahead, with Llama 3 explaining the results.",
+    stack: ["Python", "FastAPI", "PostgreSQL", "Llama 3"],
+    links: {},
+  },
   {
     title: "Smart Water Dispenser",
     category: "iot",
