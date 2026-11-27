@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FileDown, Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Logo from "../ui/Logo";
 import { navLinks } from "./navLinks";
 import { profile } from "../../data/profile";
 
@@ -58,9 +59,8 @@ export default function Header() {
       }`}
     >
       <div className="container flex h-16 items-center justify-between gap-4">
-        <Link to="/" className="font-display text-lg font-bold tracking-tight" aria-label={`${profile.name}, home`}>
-          {profile.shortName}
-          <span className="text-accent-ink">.</span>dev
+        <Link to="/" aria-label={`${profile.name}, home`} className="rounded-lg">
+          <Logo name={profile.name} title={profile.role} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">

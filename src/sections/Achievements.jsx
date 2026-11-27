@@ -1,9 +1,8 @@
-import { Award, BookOpen, ExternalLink as ExtIcon, Trophy, Users } from "lucide-react";
+import { Award, BookOpen, ExternalLink as ExtIcon, Trophy } from "lucide-react";
 import Section from "../components/ui/Section";
 import ExternalLink from "../components/ui/ExternalLink";
 import { achievements, certifications, publications } from "../data/achievements";
 import { profile } from "../data/profile";
-import { leadership } from "../data/experience";
 
 export default function Achievements() {
   return (
@@ -58,18 +57,6 @@ export default function Achievements() {
             ))}
           </ul>
 
-          <h3 className="mb-4 mt-8 flex items-center gap-2 text-lg font-bold">
-            <Users size={18} className="text-accent-ink" /> Leadership
-          </h3>
-          <ul className="space-y-4">
-            {leadership.map((l) => (
-              <li key={l.role}>
-                <p className="font-semibold">{l.role}</p>
-                <p className="text-sm text-muted">{l.org}</p>
-                <p className="font-mono text-xs text-muted">{l.period}</p>
-              </li>
-            ))}
-          </ul>
         </div>
 
         <div className="card p-6 lg:col-span-3">

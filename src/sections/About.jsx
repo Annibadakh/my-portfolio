@@ -1,6 +1,7 @@
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Trophy, Users } from "lucide-react";
 import Section from "../components/ui/Section";
 import { profile } from "../data/profile";
+import { leadership } from "../data/experience";
 
 export default function About() {
   return (
@@ -30,6 +31,23 @@ export default function About() {
             </ul>
           </div>
 
+          <div className="card p-5">
+            <p className="eyebrow mb-3">Beyond code</p>
+            <ul className="space-y-3">
+              {leadership.map((l) => (
+                <li key={l.role} className="flex gap-3">
+                  <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent-ink">
+                    {l.period ? <Users size={15} /> : <Trophy size={15} />}
+                  </span>
+                  <div>
+                    <p className="font-semibold">{l.role}</p>
+                    <p className="text-sm text-muted">{l.org}</p>
+                    {l.period && <p className="font-mono text-xs text-muted">{l.period}</p>}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Section>

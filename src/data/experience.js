@@ -72,12 +72,18 @@ export const experience = [
   },
 ];
 
-// Campus leadership, shown under Recognition.
+// Campus leadership and sport, shown in the About section ("Beyond code").
 export const leadership = [
   {
     role: "Sports Secretary",
     org: "Information Technology Engineers' Relic Association (ITERA)",
     period: "Sep 2024 – May 2025",
     detail: "Ran sports activities for the IT department's student association at Sanjivani College of Engineering.",
+  },
+  {
+    role: "Zonal level handball",
+    org: "Selected for the Zonal Level Men's Handball Competition",
+    period: "",
+    detail: "",
   },
 ];
