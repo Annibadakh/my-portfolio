@@ -18,14 +18,11 @@ export function NodeMark({ size = 34, className = "" }) {
   );
 }
 
-export default function Logo({ name, title }) {
+export default function Logo({ name }) {
   return (
     <span className="inline-flex items-center gap-2.5">
       <NodeMark size={34} className="shrink-0" />
-      <span className="leading-tight">
-        <span className="block font-display text-base font-bold tracking-tight">{name}</span>
-        <span className="block font-mono text-[10px] uppercase tracking-[0.08em] text-muted">{title}</span>
-      </span>
+      <span className="font-display text-lg font-bold tracking-tight">{name}</span>
     </span>
   );
 }

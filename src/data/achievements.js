@@ -29,6 +29,7 @@ export const achievements = [
   { title: "2nd Place, Hack-A-Bot Hackathon", detail: "Organised by UiPath." },
   { title: "300+ LeetCode problems", detail: "Data structures and algorithms practice.", url: "https://leetcode.com/u/xLjp90tolx/" },
   { title: "NPTEL Topper, Top 5%", detail: "Python for Data Science." },
+  { title: "Zonal level handball", detail: "Selected for the Zonal Level Men's Handball Competition." },
 ];
 
 export const certifications = [

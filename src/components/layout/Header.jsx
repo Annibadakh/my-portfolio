@@ -60,7 +60,7 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between gap-4">
         <Link to="/" aria-label={`${profile.name}, home`} className="rounded-lg">
-          <Logo name={profile.name} title={profile.role} />
+          <Logo name={profile.name} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">

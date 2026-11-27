@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
+import Logo from "../ui/Logo";
 import { profile } from "../../data/profile";
 import ExternalLink from "../ui/ExternalLink";
 import { GithubIcon, LeetcodeIcon, LinkedinIcon } from "../ui/BrandIcons";
@@ -12,8 +14,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-line">
       <div className="container flex flex-col items-start justify-between gap-6 py-10 sm:flex-row sm:items-center">
-        <div>
-          <p className="font-display text-lg font-bold">{profile.name}</p>
+        <div className="flex flex-col gap-2">
+          <Link to="/" aria-label={`${profile.name}, back to top`} className="w-fit rounded-lg">
+            <Logo name={profile.name} />
+          </Link>
           <p className="text-sm text-muted">
             {profile.role} · {profile.focus}
           </p>
